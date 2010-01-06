@@ -140,8 +140,8 @@
 		551DF42C0B2886420061FE17 /* MacGPGMETesting-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MacGPGMETesting-Info.plist"; sourceTree = "<group>"; };
 		551DF4370B2886CF0061FE17 /* MacGPGMETestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacGPGMETestCase.h; sourceTree = "<group>"; };
 		551DF4380B2886CF0061FE17 /* MacGPGMETestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacGPGMETestCase.m; sourceTree = "<group>"; };
-		552269AB0F053E4400CE3509 /* locale */ = {isa = PBXFileReference; lastKnownFileType = folder; name = locale; path = /usr/local/share/locale; sourceTree = "<absolute>"; };
-		55226A9A0F053F7300CE3509 /* libintl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libintl.a; path = /usr/local/lib/libintl.a; sourceTree = "<absolute>"; };
+		552269AB0F053E4400CE3509 /* locale */ = {isa = PBXFileReference; lastKnownFileType = folder; name = locale; path = /opt/local/share/locale; sourceTree = "<absolute>"; };
+		55226A9A0F053F7300CE3509 /* libintl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libintl.a; path = /opt/local/lib/libintl.a; sourceTree = "<absolute>"; };
 		5543FA91071493C4009979E9 /* GPGKeyGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGKeyGroup.h; sourceTree = "<group>"; };
 		5543FA92071493C4009979E9 /* GPGKeyGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGKeyGroup.m; sourceTree = "<group>"; };
 		554B55BF069F0111005E1C92 /* Info-MacGPGME.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-MacGPGME.plist"; sourceTree = "<group>"; };
@@ -152,8 +152,8 @@
 		554CA68E08F9608F00E135BC /* GPGSignatureNotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGSignatureNotation.m; sourceTree = "<group>"; };
 		554F654A062ADCB000BF2446 /* GPGAsyncHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGAsyncHelper.h; sourceTree = "<group>"; };
 		554F654B062ADCB000BF2446 /* GPGAsyncHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGAsyncHelper.m; sourceTree = "<group>"; };
-		556012DE09BB3C0800B31634 /* libgpg-error.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libgpg-error.a"; path = "/usr/local/lib/libgpg-error.a"; sourceTree = "<absolute>"; };
-		556012DF09BB3C0800B31634 /* libgpgme-pthread.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libgpgme-pthread.a"; path = "/usr/local/lib/libgpgme-pthread.a"; sourceTree = "<absolute>"; };
+		556012DE09BB3C0800B31634 /* libgpg-error.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libgpg-error.a"; path = "/opt/local/lib/libgpg-error.a"; sourceTree = "<absolute>"; };
+		556012DF09BB3C0800B31634 /* libgpgme-pthread.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libgpgme-pthread.a"; path = "/opt/local/lib/libgpgme-pthread.a"; sourceTree = "<absolute>"; };
 		556012E609BB3C6A00B31634 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = /usr/lib/libiconv.dylib; sourceTree = "<absolute>"; };
 		55627BD203BB4FD000000001 /* GPGKeySignature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGKeySignature.h; sourceTree = "<group>"; };
 		55627BD303BB4FD000000001 /* GPGKeySignature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGKeySignature.m; sourceTree = "<group>"; };
@@ -887,7 +887,7 @@
 				HEADER_SEARCH_PATHS = /opt/local/include;
 				INFOPLIST_FILE = "Info-MacGPGME.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = /opt/local/lib;
 				MACH_O_TYPE = mh_dylib;
 				OTHER_LDFLAGS = (
 					"-seg1addr",
@@ -920,7 +920,7 @@
 				HEADER_SEARCH_PATHS = /opt/local/include;
 				INFOPLIST_FILE = "Info-MacGPGME.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = /opt/local/lib;
 				MACH_O_TYPE = mh_dylib;
 				OTHER_LDFLAGS = "-headerpad_max_install_names";
 				PRODUCT_NAME = MacGPGME;
@@ -950,7 +950,7 @@
 				HEADER_SEARCH_PATHS = /opt/local/include;
 				INFOPLIST_FILE = "Info-MacGPGME.plist";
 				INSTALL_PATH = /Library/Frameworks;
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = /opt/local/lib;
 				MACH_O_TYPE = mh_dylib;
 				OTHER_LDFLAGS = (
 					"-seg1addr",
@@ -979,7 +979,7 @@
 				HEADER_SEARCH_PATHS = /opt/local/include;
 				INFOPLIST_FILE = "Info-MacGPGME.plist";
 				INSTALL_PATH = /Library/Frameworks;
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = /opt/local/lib;
 				MACH_O_TYPE = mh_dylib;
 				OTHER_LDFLAGS = (
 					"-seg1addr",
