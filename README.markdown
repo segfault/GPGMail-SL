@@ -30,11 +30,11 @@ again.
 
 In a nutshell:
 
-   git clone git://github.com/vjt/GPGMail-SL.git
-   cd GPGMail-SL/MacGPGME
-   xcodebuild -configuration Release
-   cd ..
-   xcodebuild -configuration Release
+    git clone git://github.com/vjt/GPGMail-SL.git
+    cd GPGMail-SL/MacGPGME
+    xcodebuild -configuration Release
+    cd ..
+    xcodebuild -configuration Release
 
 
 GPGMail will be installed automagically into your ~/Library/Mail/Bundles
