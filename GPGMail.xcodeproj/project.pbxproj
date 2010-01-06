@@ -40,7 +40,6 @@
 		550692340CD510D300CA0BA2 /* signed-Leopard.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 550692300CD510D300CA0BA2 /* signed-Leopard.tiff */; };
 		550692350CD510D300CA0BA2 /* unsigned-Leopard.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 550692310CD510D300CA0BA2 /* unsigned-Leopard.tiff */; };
 		551131E009881B8D0012293B /* GPGMailComposeTiger.nib in Resources */ = {isa = PBXBuildFile; fileRef = 551131DF09881B8D0012293B /* GPGMailComposeTiger.nib */; };
-		554CA7F608F9813E00E135BC /* MacGPGME.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 554CA7EE08F9807900E135BC /* MacGPGME.framework */; };
 		559A7F7F0838E2870052F47C /* GPG.strings in Resources */ = {isa = PBXBuildFile; fileRef = 559A7F790838E2870052F47C /* GPG.strings */; };
 		559A7F800838E2870052F47C /* GPGPassphrase.nib in Resources */ = {isa = PBXBuildFile; fileRef = 559A7F7B0838E2870052F47C /* GPGPassphrase.nib */; };
 		559A7F810838E2870052F47C /* GPGProgressIndicatorController.nib in Resources */ = {isa = PBXBuildFile; fileRef = 559A7F7D0838E2870052F47C /* GPGProgressIndicatorController.nib */; };
@@ -141,16 +140,6 @@
 			dstPath = build/Release/GPGMail.mailbundle;
 			dstSubfolderSpec = 16;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		559A81640838F2A80052F47C /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				554CA7F608F9813E00E135BC /* MacGPGME.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1965,7 +1954,6 @@
 			buildConfigurationList = 55541F4C085AE6B100548474 /* Build configuration list for PBXNativeTarget "GPGMail" */;
 			buildPhases = (
 				8D5B49AF048680CD000E48DA /* Resources */,
-				559A81640838F2A80052F47C /* CopyFiles */,
 				8D5B49B1048680CD000E48DA /* Sources */,
 				8D5B49B3048680CD000E48DA /* Frameworks */,
 				55994CC1083F2A5600F12EEF /* ShellScript */,
@@ -2117,7 +2105,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "MAC_GPGME_FRAMEWORK_VERSION=1.1.4\n\nchmod u+w \"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.${WRAPPER_EXTENSION}/Contents/Frameworks/MacGPGME.framework/Versions/${MAC_GPGME_FRAMEWORK_VERSION}/MacGPGME\"\ninstall_name_tool -id \"@loader_path/../Frameworks/MacGPGME.framework/Versions/${MAC_GPGME_FRAMEWORK_VERSION}/MacGPGME\" \"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.${WRAPPER_EXTENSION}/Contents/Frameworks/MacGPGME.framework/Versions/${MAC_GPGME_FRAMEWORK_VERSION}/MacGPGME\"\n\n# rewrite install_name in the app\ninstall_name_tool -change \"@executable_path/../Frameworks/MacGPGME.framework/Versions/${MAC_GPGME_FRAMEWORK_VERSION}/MacGPGME\" \"@loader_path/../Frameworks/MacGPGME.framework/Versions/${MAC_GPGME_FRAMEWORK_VERSION}/MacGPGME\" \"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.${WRAPPER_EXTENSION}/Contents/MacOS/${PRODUCT_NAME}\"\n\n# remove headers and documentation\nrm -rf \"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.${WRAPPER_EXTENSION}/Contents/Frameworks/MacGPGME.framework/Versions/${MAC_GPGME_FRAMEWORK_VERSION}/Headers\"\nrm -rf \"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.${WRAPPER_EXTENSION}/Contents/Frameworks/MacGPGME.framework/Versions/${MAC_GPGME_FRAMEWORK_VERSION}/PrivateHeaders\"\nrm -rf \"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.${WRAPPER_EXTENSION}/Contents/Frameworks/MacGPGME.framework/Versions/${MAC_GPGME_FRAMEWORK_VERSION}/Resources/English.lproj/Documentation\"\n";
+			shellScript = "MAC_GPGME_FRAMEWORK_VERSION=1.1.4\nMAC_GPGME_FRAMEWORK_LOCATION=\"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.${WRAPPER_EXTENSION}/Contents/Frameworks\" # XXX\n\nif [ ! -d ${MAC_GPGME_FRAMEWORK_LOCATION} ]; then\n  mkdir -p ${MAC_GPGME_FRAMEWORK_LOCATION}\n  cp -RPp ${SRCROOT}/MacGPGME/build/Release/MacGPGME.framework ${MAC_GPGME_FRAMEWORK_LOCATION}\nfi\n\nchmod u+w \"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.${WRAPPER_EXTENSION}/Contents/Frameworks/MacGPGME.framework/Versions/${MAC_GPGME_FRAMEWORK_VERSION}/MacGPGME\"\ninstall_name_tool -id \"@loader_path/../Frameworks/MacGPGME.framework/Versions/${MAC_GPGME_FRAMEWORK_VERSION}/MacGPGME\" \"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.${WRAPPER_EXTENSION}/Contents/Frameworks/MacGPGME.framework/Versions/${MAC_GPGME_FRAMEWORK_VERSION}/MacGPGME\"\n\n# rewrite install_name in the app\ninstall_name_tool -change \"@executable_path/../Frameworks/MacGPGME.framework/Versions/${MAC_GPGME_FRAMEWORK_VERSION}/MacGPGME\" \"@loader_path/../Frameworks/MacGPGME.framework/Versions/${MAC_GPGME_FRAMEWORK_VERSION}/MacGPGME\" \"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.${WRAPPER_EXTENSION}/Contents/MacOS/${PRODUCT_NAME}\"\n\n# remove headers and documentation\nrm -rf \"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.${WRAPPER_EXTENSION}/Contents/Frameworks/MacGPGME.framework/Versions/${MAC_GPGME_FRAMEWORK_VERSION}/Headers\"\nrm -rf \"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.${WRAPPER_EXTENSION}/Contents/Frameworks/MacGPGME.framework/Versions/${MAC_GPGME_FRAMEWORK_VERSION}/PrivateHeaders\"\nrm -rf \"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.${WRAPPER_EXTENSION}/Contents/Frameworks/MacGPGME.framework/Versions/${MAC_GPGME_FRAMEWORK_VERSION}/Resources/English.lproj/Documentation\"\n";
 		};
 		559A81550838F2040052F47C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
