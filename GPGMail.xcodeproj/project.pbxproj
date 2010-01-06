@@ -20,7 +20,7 @@
 		1B3434A2107B3AFB00F590EF /* GPGKeyDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 559A806D0838E9B10052F47C /* GPGKeyDownload.m */; };
 		1B3434BB107B42CC00F590EF /* MessageContentController+GPGMail.m in Sources */ = {isa = PBXBuildFile; fileRef = 559A808C0838EA1C0052F47C /* MessageContentController+GPGMail.m */; };
 		1B6D7066104F5322009DC095 /* plistutil.m in Sources */ = {isa = PBXBuildFile; fileRef = 559A81820838F38D0052F47C /* plistutil.m */; };
-		1BB95C84105EE82A00A4CAE4 /* GPGMail.mailbundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D5B49B6048680CD000E48DA /* GPGMail.mailbundle */; };
+		1BB95C84105EE82A00A4CAE4 /* GPGMail.mailbundle in Copy GPGMail in User Library */ = {isa = PBXBuildFile; fileRef = 8D5B49B6048680CD000E48DA /* GPGMail.mailbundle */; };
 		1BBA9E2F105029D200EE0416 /* GPGMailTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BBA9E2D1050295700EE0416 /* GPGMailTest.m */; };
 		1BBA9E3910502A9700EE0416 /* TesterMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BBA9E3310502A1300EE0416 /* TesterMain.m */; };
 		1BBA9E6310502B2800EE0416 /* GPGMailTester.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BBA9E6110502B2400EE0416 /* GPGMailTester.xib */; };
@@ -124,14 +124,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		1BB95C80105EE80C00A4CAE4 /* CopyFiles */ = {
+		1BB95C80105EE80C00A4CAE4 /* Copy GPGMail in User Library */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
 			dstPath = "~/Library/Mail/Bundles/";
 			dstSubfolderSpec = 0;
 			files = (
-				1BB95C84105EE82A00A4CAE4 /* GPGMail.mailbundle in CopyFiles */,
+				1BB95C84105EE82A00A4CAE4 /* GPGMail.mailbundle in Copy GPGMail in User Library */,
 			);
+			name = "Copy GPGMail in User Library";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		1BBA9F6010502DE900EE0416 /* CopyFiles */ = {
@@ -1959,7 +1960,7 @@
 				55994CC1083F2A5600F12EEF /* Script: Update MacGPGME Install Name */,
 				559A81550838F2040052F47C /* Script: Compile Resources using Rez */,
 				559A81620838F2910052F47C /* Script: Clean Up */,
-				1BB95C80105EE80C00A4CAE4 /* CopyFiles */,
+				1BB95C80105EE80C00A4CAE4 /* Copy GPGMail in User Library */,
 			);
 			buildRules = (
 				552507E90BAD561900466016 /* PBXBuildRule */,
