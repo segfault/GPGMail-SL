@@ -874,6 +874,7 @@
 		55541F6E085AE6E100548474 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 16;
 				DYLIB_COMPATIBILITY_VERSION = 15;
@@ -908,6 +909,7 @@
 		55541F6F085AE6E100548474 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 16;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -935,6 +937,7 @@
 		55541F70085AE6E100548474 /* Debug (standalone) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 16;
 				DYLIB_COMPATIBILITY_VERSION = 15;
@@ -969,6 +972,7 @@
 		55541F71085AE6E100548474 /* Release (standalone) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CURRENT_PROJECT_VERSION = 16;
 				DYLIB_COMPATIBILITY_VERSION = 15;
 				DYLIB_CURRENT_VERSION = 16;
@@ -1098,38 +1102,36 @@
 		55541F7C085AE6E100548474 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH)";
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx10.6;
 			};
 			name = Debug;
 		};
 		55541F7D085AE6E100548474 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx10.6;
 			};
 			name = Release;
 		};
 		55541F7E085AE6E100548474 /* Debug (standalone) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH)";
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx10.6;
 			};
 			name = "Debug (standalone)";
 		};
 		55541F7F085AE6E100548474 /* Release (standalone) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx10.6;
 			};
 			name = "Release (standalone)";
 		};
