@@ -126,14 +126,12 @@
 		0BD178DD01298E177F000001 /* GPGObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGObject.m; sourceTree = "<group>"; };
 		0BD178E001298E177F000001 /* GPGTrustItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGTrustItem.h; sourceTree = "<group>"; };
 		0BD178E101298E177F000001 /* GPGTrustItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGTrustItem.m; sourceTree = "<group>"; };
-		0BD1790F012998187F000001 /* gpgme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gpgme.h; path = /usr/local/include/gpgme.h; sourceTree = "<absolute>"; };
 		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		4B685599087F451800859ACB /* GPGRemoteKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGRemoteKey.h; sourceTree = "<group>"; };
 		4B68559A087F451800859ACB /* GPGRemoteKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGRemoteKey.m; sourceTree = "<group>"; };
 		4B6855E4087F4A6B00859ACB /* GPGRemoteUserID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGRemoteUserID.h; sourceTree = "<group>"; };
 		4B6855E5087F4A6B00859ACB /* GPGRemoteUserID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGRemoteUserID.m; sourceTree = "<group>"; };
 		4B6856FC088004DA00859ACB /* GPGKeyDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGKeyDefines.h; sourceTree = "<group>"; };
-		551033EF04C190E500000001 /* gpg-error.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = "gpg-error.h"; path = "/usr/local/include/gpg-error.h"; sourceTree = "<absolute>"; };
 		551033F004C1911000000001 /* frameworkEmbedding.sh */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.script.sh; path = frameworkEmbedding.sh; sourceTree = "<group>"; };
 		551033F104C1912B00000001 /* GPGSubkey.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = GPGSubkey.h; sourceTree = "<group>"; };
 		551033F204C1912B00000001 /* GPGSubkey.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = GPGSubkey.m; sourceTree = "<group>"; };
@@ -251,8 +249,6 @@
 				55B5189507AC37A6005C1DB3 /* MacGPGME_Prefix.pch */,
 				F550BC4A0201F2BB01A80016 /* GPGTester */,
 				F56F791B012E3F8001000001 /* Documentation */,
-				0BD1790F012998187F000001 /* gpgme.h */,
-				551033EF04C190E500000001 /* gpg-error.h */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				551DF4360B2886A50061FE17 /* Unit Testing */,
 				089C1665FE841158C02AAC07 /* Resources */,
