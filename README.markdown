@@ -1,8 +1,8 @@
 Information about this fork
 ===========================
 
-This fork is a repackaging and clean up of the lukele/GPGMail-SL fork, updated
-for Mail 4.2 as shipped with Mac OS X 10.6.2, and made it work with MacPorts
+This fork is a repackaging and clean up of the [lukele/GPGMail-SL][lukele] repository,
+updated for Mail 4.2 as shipped with Mac OS X 10.6.2, and made it work with MacPorts
 shipped GPG.
 
 
@@ -14,23 +14,28 @@ out Wed Jan  6 17:19:56 CET 2010 and referring r1861 from the upstream SVN
 repository.
 
 GPGMail assumes that you are a MacPorts user, and have installed the 
-  gpgme @1.2.0_0+universal and
-  libgpg-error @1.7_0+universal packages.
 
+    gpgme @1.2.0_0
+    libgpg-error @1.7_0
+
+packages.
 
 You need to build the MacGPGME framework first, by entering the MacGPGME
-directory and issuing the "xcodebuild -configuration Release" command.
+directory and issuing the <code>xcodebuild -configuration Release</code>
+command.
 
 Then you need to build GPGMail itself, by entering the parent directory
-and issuing the "xcodebuild -configuration Release" command again.
+and issuing the <code>xcodebuild -configuration Release</code> command
+again.
 
 In a nutshell:
 
-  git clone git@github.com:vjt/GPGMail-SL.git
-  cd GPGMail-SL/MacGPGME
-  xcodebuild -configuration Release
-  cd ..
-  xcodebuild -configuration Release
+   git clone git://github.com/vjt/GPGMail-SL.git
+   cd GPGMail-SL/MacGPGME
+   xcodebuild -configuration Release
+   cd ..
+   xcodebuild -configuration Release
+
 
 GPGMail will be installed automagically into your ~/Library/Mail/Bundles
 directory. Be sure to restart Mail to start GPG-ing with your friends :-).
@@ -62,13 +67,18 @@ repository and send me a pull request :-).
 Further information
 ===================
 
-Be sure to check the original GPGMail home page: http://sente.ch/gpgmail
-The SourceForge.net MacGPG project: http://sourceforge.net/projects/macgpg/
-The original rca repository: http://github.com/rca/GPGMail/ and the one
-from which this one was forked from: http://github.com/lukele/GPGMail/
+Be sure to check the original GPGMail home page: [http://sente.ch/gpgmail][home]
+The SourceForge.net MacGPG project: [http://sourceforge.net/projects/macgpg/][sf]
+The original rca repository: [http://github.com/rca/GPGMail/][rca] and the one
+from which this one was forked from: [http://github.com/lukele/GPGMail/][lukele]
 
 Also check out the DeveloperInfo.txt file, the HISTORY one, and so on.
 
 Happy PGP-ing,
 
  - vjt@openssl.it
+
+[lukele]: http://github.com/lukele/GPGMail/
+[rca]: http://github.com/rca/GPGMail/
+[sf]: http://sourceforge.net/projects/macgpg/
+[home]: http://sente.ch/gpgmail
