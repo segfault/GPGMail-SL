@@ -1,12 +1,3 @@
-How to compile GPGMail?
-=======================
-GPGMail sources come with a copy of the official MacGPGME source code.
-
-You need first to download and install libgpg-error and libgpgme. Read the 
-README in MacGPGME folder for instructions. Then you can compile GPGMail project, 
-which will compile MacGPGME sources too.
-
-
 Release notes for v28:
 * Corrected sync problem of public key list when changing viewed attributes
 * Now checks presence of PGPmail
