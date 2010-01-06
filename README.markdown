@@ -5,6 +5,7 @@ This fork is a repackaging and clean up of the lukele/GPGMail-SL fork, updated
 for Mail 4.2 as shipped with Mac OS X 10.6.2, and made it work with MacPorts
 shipped GPG.
 
+
 How to compile GPGMail?
 =======================
 
@@ -34,6 +35,10 @@ In a nutshell:
 GPGMail will be installed automagically into your ~/Library/Mail/Bundles
 directory. Be sure to restart Mail to start GPG-ing with your friends :-).
 
+You can, as well, use XCode to build both the projects, change the active
+configurations, debug, develop, etc :-).
+
+
 Open issues
 ===========
 
@@ -53,6 +58,16 @@ Open issues
 If you have some spare time to fix these issues, feel free to fork the
 repository and send me a pull request :-).
 
+
+Further information
+===================
+
+Be sure to check the original GPGMail home page: http://sente.ch/gpgmail
+The SourceForge.net MacGPG project: http://sourceforge.net/projects/macgpg/
+The original rca repository: http://github.com/rca/GPGMail/ and the one
+from which this one was forked from: http://github.com/lukele/GPGMail/
+
+Also check out the DeveloperInfo.txt file, the HISTORY one, and so on.
 
 Happy PGP-ing,
 
