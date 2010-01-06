@@ -985,6 +985,7 @@
 		559A81860838F3C30052F47C /* Info-GPGMail.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-GPGMail.plist"; sourceTree = SOURCE_ROOT; };
 		559A819C0838F87E0052F47C /* Installer.applescript */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.applescript; path = Installer.applescript; sourceTree = "<group>"; };
 		55CB1D76098D4B95007D00D4 /* NL.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = NL.gif; sourceTree = "<group>"; };
+		7895D0DE10F4DE1F00075937 /* MacGPGME.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MacGPGME.xcodeproj; path = MacGPGME/MacGPGME.xcodeproj; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* GPGMail.mailbundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GPGMail.mailbundle; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1023,6 +1024,7 @@
 		089C166AFE841209C02AAC07 /* GPGMail */ = {
 			isa = PBXGroup;
 			children = (
+				7895D0DE10F4DE1F00075937 /* MacGPGME.xcodeproj */,
 				08FB77AFFE84173DC02AAC07 /* GPG */,
 				559A7FB30838E4200052F47C /* Documentation */,
 				559A80310838E6870052F47C /* Headers */,
@@ -1911,6 +1913,16 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		7895D0DF10F4DE1F00075937 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7895D0E810F4DE2000075937 /* MacGPGME.framework */,
+				7895D0EA10F4DE2000075937 /* GPGTester.app */,
+				7895D0EC10F4DE2000075937 /* MacGPGMETesting.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1996,6 +2008,12 @@
 			);
 			mainGroup = 089C166AFE841209C02AAC07 /* GPGMail */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7895D0DF10F4DE1F00075937 /* Products */;
+					ProjectRef = 7895D0DE10F4DE1F00075937 /* MacGPGME.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8D5B49AC048680CD000E48DA /* GPGMail */,
@@ -2004,6 +2022,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7895D0E810F4DE2000075937 /* MacGPGME.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MacGPGME.framework;
+			remoteRef = 7895D0E710F4DE2000075937 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7895D0EA10F4DE2000075937 /* GPGTester.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = GPGTester.app;
+			remoteRef = 7895D0E910F4DE2000075937 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7895D0EC10F4DE2000075937 /* MacGPGMETesting.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = MacGPGMETesting.octest;
+			remoteRef = 7895D0EB10F4DE2000075937 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1BBA9E1D1050291C00EE0416 /* Resources */ = {
@@ -2512,7 +2554,11 @@
 				BUNDLE_LOADER = /Applications/Mail.app/Contents/MacOS/Mail;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 52;
-				FRAMEWORK_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/../Release";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)/../Release",
+					"\"$(SRCROOT)/MacGPGME/build/Debug\"",
+					"\"$(SRCROOT)/MacGPGME/build/Release\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -2549,7 +2595,11 @@
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 52;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/../Release";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)/../Release",
+					"\"$(SRCROOT)/MacGPGME/build/Debug\"",
+					"\"$(SRCROOT)/MacGPGME/build/Release\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = GPGMail_Prefix.pch;
 				HEADER_SEARCH_PATHS = "";
